@@ -6,17 +6,17 @@ Users can enter a stock symbol or company name, view historical trends, and get 
 ---
 
 ## 🛠️ Tech Stack
-- Backend & Web: Flask, Python  
-- Data & ML: Pandas, Numpy, TensorFlow, Keras, yfinance, yahooquery  
-- Visualization: Matplotlib  
+- **Backend & Web:** Flask, Python  
+- **Data & ML:** Pandas, NumPy, TensorFlow, Keras, yfinance, yahooquery  
+- **Visualization:** Matplotlib  
 
 ---
 
 ## 🚀 Features
-- Enter stock symbol (e.g., `AAPL`) or company name (e.g., `Apple`)  
-- Predict future stock prices using an LSTM model  
-- Visualize historical trends with matplotlib charts  
-- Works locally — no server deployment required  
+- 🔍 Enter stock symbol (e.g., `AAPL`) or company name (e.g., `Apple`)  
+- 📈 Predict future stock prices using an LSTM model  
+- 📊 Visualize historical trends with matplotlib charts  
+- 💾 Works locally — no server deployment required  
 
 ---
 
@@ -30,31 +30,48 @@ Users can enter a stock symbol or company name, view historical trends, and get 
 
 ## ⚙️ Getting Started
 
-### 1. Clone and Install
+### 1️⃣ Clone & Install
 ```bash
 git clone https://github.com/SreeragSreekanth/stockprice-predictor.git
 cd stockprice-predictor
 python -m venv venv
-# Linux/Mac
+
+# Activate the virtual environment
+# Linux / Mac
 source venv/bin/activate
 # Windows
 venv\Scripts\activate
-pip install -r requirements.txt
-2. Run the App
-bash
-Copy code
-python app.py
-Open your browser and go to:
 
-cpp
-Copy code
+# Install dependencies
+pip install -r requirements.txt
+```
+
+2️⃣ Run the App
+```bash
+python app.py
+```
+
+Open your browser and go to:
+```
 http://127.0.0.1:5000
+```
+
 🧾 Usage
+
 Enter a stock symbol or company name.
 
 Select the number of days to predict.
 
 View historical stock chart and future predictions.
 
+⚠️ Notes
+
+Predictions are based on historical stock data and cannot guarantee future prices.
+
+Works locally, so no GPU or heavy server memory is required.
+
+Company names are resolved to symbols using yahooquery. If a company is missing, the symbol might not be found.
+
 ✨ Author
-Made by Sreerag Sreekanth
+
+Made with ❤️ by Sreerag Sreekanth
