@@ -68,8 +68,6 @@ View historical stock chart and future predictions.
 
 Predictions are based on historical stock data and cannot guarantee future prices.
 
-Works locally, so no GPU or heavy server memory is required.
-
 Company names are resolved to symbols using yahooquery. If a company is missing, the symbol might not be found.
 
 ✨ Author
