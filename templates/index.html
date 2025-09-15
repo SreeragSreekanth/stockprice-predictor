@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <title>Stock Price Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 13px;
+            color: #777;
+            margin: 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Stock Price Predictor (LSTM AI)</h2>
+        <form action="/predict" method="post">
+            <label>Company Name:</label>
+            <input type="text" name="company" value="Apple" required>
+            <p>Enter any company name (e.g., Apple, Reliance, Tesla, Microsoft).</p>
+
+            <label>Future Days to Forecast:</label>
+            <input type="number" name="future_days" value="7" min="1" max="30">
+            <p>How many days ahead you want predictions for (max 30).</p>
+
+            <button type="submit">Run Prediction</button>
+        </form>
+    </div>
+</body>
+</html>

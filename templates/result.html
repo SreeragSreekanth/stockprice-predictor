@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even){background-color: #f9f9f9;}
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover { text-decoration: underline; }
+        .error { color: red; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if error %}
+            <h2 class="error">Error</h2>
+            <p class="error">{{ error }}</p>
+            <p style="text-align:center;"><a href="/">Back</a></p>
+        {% else %}
+            <h2>Results for {{ symbol }}</h2>
+            <img src="/static/{{ imgfile }}" alt="Stock Prediction Graph">
+
+            <h3>Future Predictions</h3>
+            <table>
+                <tr><th>Date</th><th>Predicted Close Price</th></tr>
+                {% for p in predictions %}
+                <tr><td>{{ p.date }}</td><td>{{ p.price }}</td></tr>
+                {% endfor %}
+            </table>
+
+            <p style="text-align:center;"><a href="/">Try another symbol</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
