@@ -74,4 +74,4 @@ Company names are resolved to symbols using yahooquery. If a company is missing,
 
 ✨ Author
 
-Made with ❤️ by Sreerag Sreekanth
+Built with ❤️ by [Sreerag Sreekanth](https://github.com/SreeragSreekanth)
